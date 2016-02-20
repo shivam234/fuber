@@ -1,0 +1,33 @@
+<%= form_for(@cab) do |f| %>
+  <% if @cab.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cab.errors.count, "error") %> prohibited this cab from being saved:</h2>
+
+      <ul>
+      <% @cab.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cab_type %><br>
+    <%= f.text_field :cab_type %>
+  </div>
+  <div class="field">
+    <%= f.label :location_x %><br>
+    <%= f.number_field :location_x %>
+  </div>
+  <div class="field">
+    <%= f.label :location_y %><br>
+    <%= f.number_field :location_y %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

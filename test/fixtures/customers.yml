@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  location_x: 1
+  location_y: 1
+  destination_x: 1
+  destination_y: 1
+  request_type: MyString
+
+two:
+  name: MyString
+  location_x: 1
+  location_y: 1
+  destination_x: 1
+  destination_y: 1
+  request_type: MyString

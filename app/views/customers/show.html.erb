@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @customer.name %>
+</p>
+
+<p>
+  <strong>Location x:</strong>
+  <%= @customer.location_x %>
+</p>
+
+<p>
+  <strong>Location y:</strong>
+  <%= @customer.location_y %>
+</p>
+
+<p>
+  <strong>Destination x:</strong>
+  <%= @customer.destination_x %>
+</p>
+
+<p>
+  <strong>Destination y:</strong>
+  <%= @customer.destination_y %>
+</p>
+
+<p>
+  <strong>Request type:</strong>
+  <%= @customer.request_type %>
+</p>
+
+<%= link_to 'Edit', edit_customer_path(@customer) %> |
+<%= link_to 'Back', customers_path %>

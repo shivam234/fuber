@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @cab.cab_type %>
+</p>
+
+<p>
+  <strong>Location x:</strong>
+  <%= @cab.location_x %>
+</p>
+
+<p>
+  <strong>Location y:</strong>
+  <%= @cab.location_y %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @cab.status %>
+</p>
+
+<%= link_to 'Edit', edit_cab_path(@cab) %> |
+<%= link_to 'Back', cabs_path %>
