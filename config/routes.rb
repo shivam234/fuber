@@ -9,11 +9,6 @@ Rails.application.routes.draw do
         put 'end_ride'
       end
     end
-
-    resources :customers do
-      collection do
-      end
-    end
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

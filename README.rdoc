@@ -1,28 +1,35 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+created REST apis for booking a cab and ending a ride.Also the list of cabs is shown in frontend.
+API Requests:
 
-Things you may want to cover:
+=> call_cab
+  customer call this method by providing his cust_id as parameter
+   url: http://localhost:3000/api/cabs/call_cab
+   method: PUT
+   body : not needed
+   url parameter key required(cust_id)
 
-* Ruby version
+=> end_ride
+  customer call this method by providing his cust_id as parameter
+   url: http://localhost:3000/api/cabs/end_ride
+   method: PUT
+   body : not needed
+   url parameter key required(cust_id)
 
-* System dependencies
+=> listing cabs
+   url: http://localhost:3000/api/cabs
+   method: GET
+   body : not needed
 
-* Configuration
+=> Retrieving Cab detail
+  url: http://localhost:3000/api/cabs/:id
+  method: GET
+  body : not needed
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+=> Deleting Cab
+  url: http://localhost:3000/api/cabs/:id
+  method: DELETE
+  body : not needed
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
