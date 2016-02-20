@@ -16,30 +16,30 @@ class Api::CabsController < ApplicationController
     end
   end
 
-  def create
-    @cab = Cab.new(cab_params)
-    respond_to do |format|
-      if @cab.save
-        format.json { render json: @cab, status: :created }
-        format.xml { render xml: @cab, status: :created }
-      else
-        format.json { render json: @cab.errors, status: :unprocessable_entity }
-        format.xml { render xml: @cab.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  # def create
+  #   @cab = Cab.new(cab_params)
+  #   respond_to do |format|
+  #     if @cab.save
+  #       format.json { render json: @cab, status: :created }
+  #       format.xml { render xml: @cab, status: :created }
+  #     else
+  #       format.json { render json: @cab.errors, status: :unprocessable_entity }
+  #       format.xml { render xml: @cab.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
-  def update
-    respond_to do |format|
-      if @cab.update_attributes(cab_params)
-        format.json { head :no_content, status: :ok }
-        format.xml { head :no_content, status: :ok }
-      else
-        format.json { render json: @cab.errors, status: :unprocessable_entity }
-        format.xml { render xml: @cab.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  # def update
+  #   respond_to do |format|
+  #     if @cab.update_attributes(cab_params)
+  #       format.json { head :no_content, status: :ok }
+  #       format.xml { head :no_content, status: :ok }
+  #     else
+  #       format.json { render json: @cab.errors, status: :unprocessable_entity }
+  #       format.xml { render xml: @cab.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
   def destroy
     respond_to do |format|
