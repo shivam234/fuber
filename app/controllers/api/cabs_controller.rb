@@ -1,6 +1,7 @@
 class Api::CabsController < ApplicationController
+   # http_basic_authenticate_with name: "admin", password: "secret"
    before_action :set_cab, only: [:show, :edit, :update, :destroy]
-
+   before_filter :restrict_access
   def index
     @cab = Cab.all
     respond_to do |format|
@@ -96,6 +97,10 @@ class Api::CabsController < ApplicationController
   end
 
   private
+    def restrict_access
+      api_key = ApiKey.find_by_access_token(params[:access_token])
+      head :unauthorized unless api_key
+    end
 
     def set_cab
       @cab = Cab.find(params[:id])
