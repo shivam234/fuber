@@ -3,6 +3,9 @@
 created REST apis for booking a cab and ending a ride.Also the list of cabs is shown in frontend.
 API Requests:
 
+First create apikey in table using command ApiKey.create! in rails console.
+Then passing access_token and its value as parameter you can call the apis-
+
 => call_cab
   customer call this method by providing his cust_id as parameter
    url: http://localhost:3000/api/cabs/call_cab
